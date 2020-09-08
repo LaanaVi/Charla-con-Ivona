@@ -1,0 +1,27 @@
+
+{% extends "admin/base_site.html" %}
+ {% block title %} {{ title }} | Charla con Ivona {% endblock %}
+
+{% block extrastyle %}
+ <style>
+     #header {
+         background-color: #ec7517;
+     }
+     .module h2, .module caption, .inline-group h2, .breadcrumbs{
+         font-size: 18px;
+         font-family: 'Source Sans Pro', sans-serif;
+         background-color: #ec7517;
+         color: #f8f1ad; !important;
+     }
+     a {
+         color: black; !important;
+     }
+ </style>
+ {% endblock %}
+
+{% block branding %}
+ <h1>Charla con Ivona</h1>
+ {% endblock %}
+
+
+{% block nav-global %}{% endblock %}%}
