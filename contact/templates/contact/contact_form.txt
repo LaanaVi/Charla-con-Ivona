@@ -1,0 +1,17 @@
+Ime:
+{{ contact_name }}
+
+Email:
+{{ contact_email }}
+
+Broj telefona:
+{{ contact_number }}
+
+Poruka:
+{{ message }}
+
+Nivo španskog koji govorite:
+{{ language_level }}
+
+Tip časova:
+{{ class_type }}

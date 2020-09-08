@@ -1,0 +1,54 @@
+{% extends 'base.html '%}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block head %}
+    <title>Kontakt</title>
+{% endblock%}
+
+{% block body %}
+<div class="card-deck">
+  <div class="card">
+    <a href="https://www.facebook.com/Charla-con-Ivona-101498704984645">
+        <i class="fab fa-facebook-square fa-2x"></i>&nbsp; Charla con Ivona
+    </a><hr>
+    <a href="https://www.instagram.com/charlaconivona/">
+        <i class="fab fa-instagram-square fa-2x"></i>&nbsp; @charlaconivona
+    </a><hr>
+       <a href="https://rs.linkedin.com/in/ivona-ognjenovi%C4%87">
+       <i class="fab fa-linkedin fa-2x"></i>&nbsp; Ivona Ognjenović
+    </a><hr>
+  <p>
+      <i class="fas fa-envelope-square fa-2x"></i>&nbsp; ognjenovicivona@gmail.com
+  </p><hr>
+    <p>
+    <i class="fas fa-phone-square fa-2x"></i>&nbsp; +381/62-55-98-79
+    </p><hr>
+
+
+  </div>
+  <div class="card col-md-order-last">
+    <img src="{% static 'images/pen5.png' %}" class="card-img-bottom" alt="picture" >
+      </div>
+  <div class="card">
+     <h4>Popuni prijavu</h4>
+            <small>Polja označena zvezdicom(*) su obavezna</small><br>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-dark" role="alert">
+                       {{ message }}
+                     </div>
+
+                 {% endfor %}
+            {% endif %}
+            <form method="post">
+                {% csrf_token %}
+                {{ contact_form|crispy}}
+                <button class="btn btn-dark" type="submit">Pošalji prijavu</button>
+            </form>
+  </div>
+</div>
+
+
+{% endblock%}
