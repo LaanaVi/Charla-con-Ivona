@@ -1,15 +1,15 @@
 import os
-from .passwords import *
+from decouple import config
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = SECRET_KEY
+SECRET_KEY = config("SECRET_KEY")
 
-DEBUG = False
+DEBUG = config("DEBUG", cast=bool)
 
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+#SECURE_SSL_REDIRECT = True
+#SESSION_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True
 
 ALLOWED_HOSTS = ["charlaconivona.herokuapp.com", "charlaconivona.com", "127.0.0.1"]
 
@@ -66,10 +66,10 @@ WSGI_APPLICATION = 'spanish.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': NAME,
-        'USER': USER,
-        'PASSWORD': PASSWORD,
-        'HOST': HOST,
+        'NAME': config("NAME"),
+        'USER': config("USER"),
+        'PASSWORD': config("PASSWORD"),
+        'HOST': config("HOST"),
         'PORT': '5432'
     }
 }
@@ -90,8 +90,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = MAIL_HOST_USER
-EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
+EMAIL_HOST_USER = config("MAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
