@@ -2,19 +2,26 @@
 {% load static %}
 
 {% block extrahead %}
+
   <script>window.CKEDITOR_BASEPATH = 'static/ckeditor/ckeditor/';</script>
-    <link rel="shortcut icon" href="{% static 'images/favicon.png' type='image/x-icon' %}">
+
   {{ block.super }}
 {% endblock %}
 
-<html lang="en">
+<html lang="sr">
 <head>
+    <title>Charla con Ivona</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Charla con Ivona je mesto gde svi ljubitelji španskog jezika i hispanske kulture mogu da, uz interaktivnu stranicu i online časove, uživaju u kontaktu sa jednim od najlepših jezika sveta.">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="spanski, casovi, jezik, online">
     <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f5551af0e4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' type='image/x-icon' %}">
     {% block head %}
     {% endblock%}
 </head>
