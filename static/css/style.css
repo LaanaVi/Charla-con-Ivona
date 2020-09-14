@@ -284,7 +284,6 @@ rgba(252, 227, 148, 0.2);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    transform: scale(1.1);
     font-family: 'Open Sans', sans-serif; !important;
     font-weight: 700; !important;
     font-size: 18px;
