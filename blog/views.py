@@ -3,6 +3,7 @@ from .models import Post
 from django.core.paginator import Paginator
 from django.db.models import Q
 from django.utils import timezone
+from urllib.parse import quote_plus
 
 def blog_view(request):
     posts = Post.objects.filter(draft=False).filter(publish__lte=timezone.now()).order_by('-id')
@@ -25,5 +26,7 @@ def blog_view(request):
 
 def post_view(request, id):
     post = get_object_or_404(Post, id=id)
-    context = {'post': post}
+    share_string = quote_plus(post.content)
+    context = {'post': post,
+               'share_string': share_string}
     return render(request, 'blog/post.html', context)

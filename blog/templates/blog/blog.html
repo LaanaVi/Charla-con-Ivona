@@ -7,62 +7,64 @@
 {% endblock%}
 
 
-
 {% block body %}
-<div class="container">
-     <div class="row justify-content-center">
-         <nav class="col align-self-center">
-             <div class="d-flex justify-content-end">
-        <form class="form-inline my-2 my-lg-0" method="GET" action="">
-            <div class="col-md-8">
-                <label>
-                    <input class="form-control mr-sm-2" type='text' name="q" placeholder="Pretraži blog..." value="{{ request.GET.q }}">
-                </label>
-            </div>
-            <div class="col-md-4">
-                <button class="btn btn-dark" type="submit">Pretraga</button>
-            </div>
-        </form>
-                 </div>
-             <hr>
-         </nav>
-     </div>
 
-{% for post in page_obj %}
-                <div class="card border-dark mb-6" style="max-width: 800px;">
-                  <div class="card-header">
-                      <a id="post-title" href="{% url 'post' id=post.id %}">
-                          <i class="fas fa-bahai"></i>&nbsp{{post.title}}</a>
+    <div class="container">
+        <div class="container">
+             <div class="row justify-content-end">
+                 <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" name="q" placeholder="Pretraži blog..." value="{{ request.GET.q }}">
+                    <button class="btn btn-dark my-2 my-sm-0" type="submit">Pretraga</button>
+                 </form>
+             </div>
+        </div>
+        {% for post in page_obj %}
+            <div class="card border-dark mb-6" style="max-width: 800px;">
+                  <div>
+                      <a href="{% url 'post' id=post.id %}">
+                        <h4 class="card-header" id="blog-title">{{post.title}}</h4>
+                      </a>
                   </div>
                   <div class="card-body text-dark">
-                    <p class="card-text">{{post.content|safe |truncatewords:20|linebreaks}}</p>
+                      <h4 class="card-text blog">{{post.content|safe |truncatewords:20|linebreaks}}</h4>
                   </div>
-                    <div class="card-footer text-muted">
-                        <small class="text-muted">Autor: {{post.author}}</small><hr>
-                        <small class="text-muted">{{post.publish}}</small>
-                    </div>
-              </div><hr style=" background-color: black !important; color: black!important; border: solid 0.5px black !important; height: 0.5px !important; width: 1000px !important; opacity: 70% !important;">
-     {% endfor %}
-<nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-end">
-            <li class="page-item">
-                {% if page_obj.has_previous %}
-                    <a href="?page=1&q={{request.GET.q}}"><i class="fas fa-angle-double-left"></i></a>
-                    <a href="?page={{ page_obj.previous_page_number }}&q={{request.GET.q}}"><i class="fas fa-angle-left"></i>&nbsp;</a>
-                {% endif %}
-            </li>
-            <li class="page-item" >
-                <strong style="font-size: 18px">{{ page_obj.number }} od {{ page_obj.paginator.num_pages }}&nbsp;</strong>
-            </li>
-            <li class="page-item">
+                  <div class="card-footer text-muted">
 
-                {% if page_obj.has_next %}
-                    <a href="?page={{ page_obj.next_page_number }}&q={{request.GET.q}}"><i class="fas fa-angle-right"></i></a>
-                    <a  href="?page={{ page_obj.paginator.num_pages }}&q={{request.GET.q}}"><i class="fas fa-angle-double-right"></i></a>
-                {% endif %}
-            </li>
-        </ul>
-</nav>
- </div>
+                      <small class="text-muted">Autor: {{post.author}}</small><hr>
+                      <small class="text-muted">{{post.publish}}</small>
+                  </div>
+            </div><hr style="background-color: black !important; color: black!important; border: solid 0.5px black !important; height: 0.5px !important; width: 1000px !important; opacity: 70% !important;">
+        {% empty %}
+            <div class="container">
+                <div class=" row justify-content-center">
+                     <img style="max-width: 800px" src="{% static 'images/nothing.png' %}" class="card-img-bottom" alt="picture" >
+                </div>
+            </div>
+        {% endfor %}
 
+        {% if page_obj.paginator.num_pages != 1 %}
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item">
+                        {% if page_obj.has_previous %}
+                            <a href="?page=1&q={{request.GET.q}}"><i class="fas fa-angle-double-left"></i></a>
+                            <a href="?page={{ page_obj.previous_page_number }}&q={{request.GET.q}}"><i class="fas fa-angle-left"></i>&nbsp;</a>
+                        {% endif %}
+                    </li>
+                    <li class="page-item" >
+                        <strong style="font-size: 18px">{{ page_obj.number }} od {{ page_obj.paginator.num_pages }}&nbsp;</strong>
+                    </li>
+                    <li class="page-item">
+                        {% if page_obj.has_next %}
+                            <a href="?page={{ page_obj.next_page_number }}&q={{request.GET.q}}"><i class="fas fa-angle-right"></i></a>
+                            <a  href="?page={{ page_obj.paginator.num_pages }}&q={{request.GET.q}}"><i class="fas fa-angle-double-right"></i></a>
+                        {% endif %}
+                    </li>
+                </ul>
+            {% else %}
+                <ul style="display: none" class="pagination justify-content-end">
+                </ul>
+            </nav>
+        {% endif %}
+    </div>
 {% endblock%}

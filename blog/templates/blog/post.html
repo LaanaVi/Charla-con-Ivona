@@ -7,23 +7,18 @@
 
 
 {% block body %}
-
-<div id="fb-root"></div>
-
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=528486167843862&autoLogAppEvents=1" nonce="S7G8TVo6"></script>
-
-
 <div class="container">
      <div class="row justify-content-center">
-<div class="card-body">
-    <h5 class="card-header" style="font-family:'Covered By Your Grace', cursive; !important; font-size: 40px; !important;"><i class="fas fa-bahai"></i>&nbsp{{post.title}}</h5>
-    <p class="card-text">{{post.content|safe|linebreaks}}</p><hr>
-    <p class="card-text"><small class="text-muted">Autor: {{post.author}}</small></p><hr>
-    <p class="card-text"><small class="text-muted">{{post.publish}}</small></p>
-<div class="fb-share-button" data-href="{{request.build_absolute_uri }}" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-<div><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-</div>
+        <div class="card-body">
+            <h4 style="text-align: center !important;" class="card-header" id="blog-title2">{{post.title}}</h4>
+            <h4 style="padding: 20px" class="card-text blog">{{post.content|safe|linebreaks}}</h4><hr>
+            <p style="text-align: end !important;" class="card-text blog"><small class="text-muted">Autor: {{post.author}}</small></p><hr>
+            <p style="text-align: end !important;" class="card-text blog"><small class="text-muted">{{post.publish}}</small></p><hr>
 
-     </div>
+            <a style="text-align: end !important;" class="fab-share" href="https://www.facebook.com/sharer/sharer.php?u={{request.build_absolute_uri }}">
+                 <i style="color: #3d62f5" class="fab fa-facebook fa-2x"></i>
+            </a>
+        </div>
+    </div>
 </div>
 {% endblock%}

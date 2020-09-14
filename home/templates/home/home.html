@@ -47,48 +47,33 @@
               </div>
             </div>
         </div>
-    </div>
+    </div><hr>
 </div>
 
 
 <div class="container">
      <div class="row justify-content-center">
         <div class="col-12" id="hola">
-            <h2>¡HOLA, MI GENTE!</h2><hr>
+            <h2 class="hola">¡HOLA, MI GENTE!</h2><hr>
         </div>
         <div class="col-12" id="first">
             <div class="card w-100">
               <div class="card-body">
-            <h5 class="card-text">Charla con Ivona je mesto za sve ljubitelje španskog jezika i hispanske kulture.<hr> Uz interaktivnu stranicu i online časove španskog jezika, zaljubljenici u španski mogu da uživaju u kontaktu sa jednim od najlepših jezika sveta.</h5><hr>
+            <h5 class="card-text charla">Charla con Ivona je mesto za sve ljubitelje španskog jezika i hispanske kulture.<hr> Uz interaktivnu stranicu i online časove španskog jezika, zaljubljenici u španski mogu da uživaju u kontaktu sa jednim od najlepših jezika sveta.</h5><hr>
              </div>
             </div>
 
         </div>
-        <div class="col-12" id="second">
-             <div class="card w-100">
-             <h4>Nudimo:</h4>
-        </div>
-         <div class="col-12">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><i class="fas fa-bahai"></i>&nbsp; online individualne i grupne časove</li>
-                <li class="list-group-item"><i class="fas fa-bahai"></i>&nbsp; personalizovani pristup i časove po vašoj meri</li>
-                <li class="list-group-item"><i class="fas fa-bahai"></i>&nbsp; određivanje nivoa</li>
-                <li class="list-group-item"><i class="fas fa-bahai"></i>&nbsp; kurseve prema evropskom okviru (A1, A2, B1, B2, C1)</li>
-                <li class="list-group-item"><i class="fas fa-bahai"></i>&nbsp; pripremu za DELE i ostale vrste ispita iz španskog jezika</li>
-                <li class="list-group-item"><i class="fas fa-bahai"></i>&nbsp; časove konverzacije</li>
-                <li class="list-group-item"><i class="fas fa-bahai"></i>&nbsp; poslovni španski</li>
-                <li class="list-group-item"><i class="fas fa-bahai"></i>&nbsp; prevod</li>
-            </ul><hr>
-         </div>
-        </div>
+
+{% include 'accordian.html' %}
 
         <div class="col-12" id="third">
             <div class="card w-100">
-            <h5>Za više informacija, kontaktirajte nas putem e-maila,<a href="https://www.facebook.com/Charla-con-Ivona-101498704984645">Facebook</a>/<a href="https://www.instagram.com/charlaconivona/">Instagram</a> stranice ili popunite <a href="{% url 'form'%}">prijavu</a> na našem sajtu.</h5><hr>
+                <h5 class="charla">Za više informacija, posetite našu <a class="kontakt-stranica" href="{% url 'contact' %}">kontakt stranicu</a></h5><hr>
         </div>
         </div>
         <div class="col-12" id="last">
-            <h2>¡EMPRENDE TU VIAJE DE ESPAÑOL!</h2>
+            <h2 class="hola">¡EMPRENDE TU VIAJE DE ESPAÑOL!</h2>
         </div>
     </div>
 </div>

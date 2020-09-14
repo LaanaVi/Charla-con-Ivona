@@ -10,29 +10,32 @@
 {% block body %}
 <div class="card-deck">
   <div class="card">
-    <a href="https://www.facebook.com/Charla-con-Ivona-101498704984645">
-        <i class="fab fa-facebook-square fa-2x"></i>&nbsp; Charla con Ivona
-    </a><hr>
-    <a href="https://www.instagram.com/charlaconivona/">
-        <i class="fab fa-instagram-square fa-2x"></i>&nbsp; @charlaconivona
-    </a><hr>
-       <a href="https://rs.linkedin.com/in/ivona-ognjenovi%C4%87">
-       <i class="fab fa-linkedin fa-2x"></i>&nbsp; Ivona Ognjenović
-    </a><hr>
-  <p>
+      <p class="kontakt box">
+    <i class="fas fa-phone-square fa-2x"></i>&nbsp; +381/62-55-98-79
+    </p>
+      <p class="kontakt box">
       <i class="fas fa-envelope-square fa-2x"></i>&nbsp; ognjenovicivona@gmail.com
   </p><hr>
-    <p>
-    <i class="fas fa-phone-square fa-2x"></i>&nbsp; +381/62-55-98-79
-    </p><hr>
+    <div class="social-media">
+    <a class="hover-media" href="https://www.facebook.com/Charla-con-Ivona-101498704984645">
+        <i class="fab fa-facebook-square fa-2x"></i>
+    </a>&nbsp;
+    <a class="hover-media" href="https://www.instagram.com/charlaconivona/">
+        <i  class="fab fa-instagram-square fa-2x"></i>
+    </a>&nbsp;
+       <a class="hover-media" href="https://rs.linkedin.com/in/ivona-ognjenovi%C4%87">
+       <i class="fab fa-linkedin fa-2x"></i>&nbsp;
+    </a>
+  </div><hr>
+
 
 
   </div>
   <div class="card col-md-order-last">
-    <img src="{% static 'images/pen5.png' %}" class="card-img-bottom" alt="picture" >
+    <img src="{% static 'images/pen.png' %}" class="card-img-bottom" alt="picture" >
       </div>
   <div class="card">
-     <h4>Popuni prijavu</h4>
+     <h5 class="prijava" style="text-align: left">Popuni prijavu</h5>
             <small>Polja označena zvezdicom(*) su obavezna</small><br>
             {% if messages %}
                 {% for message in messages %}

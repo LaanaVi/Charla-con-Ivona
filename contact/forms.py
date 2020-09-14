@@ -17,6 +17,6 @@ class ContactForm(forms.Form):
     contact_name = forms.CharField(required=True, label='Ime i prezime ' )
     contact_email = forms.EmailField(required=True, label='Email ' )
     contact_number = forms.IntegerField(required=True, label='Broj telefona ' )
-    message = forms.CharField(required=True, label='Poruka ', widget=forms.Textarea(attrs={'rows': 4, 'cols': 40}))
+    message = forms.CharField(required=False, label='Poruka ', widget=forms.Textarea(attrs={'rows': 4, 'cols': 40}))
     class_type = forms.ChoiceField(choices=CLASS_TYPE_CHOICES, required=True, label='Tip časova ' )
     language_level = forms.ChoiceField(choices=LEVEL_CHOICES, required=True, label='Nivo španskog koji govorite ' )

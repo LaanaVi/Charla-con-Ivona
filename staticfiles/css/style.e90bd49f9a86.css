@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    }
+#overall {
+    min-height: 100%;
+    background-image:url("/static/images/back.f89cdc2314e6.png");
+    background-repeat: repeat; !important;
+    background-attachment: fixed; !important;
+}
+@media only screen and (max-width: 421px) {
+  #overall {
+      min-height: 100%;
+      background-image:url("/static/images/back1.04b608b886c8.png"); !important;
+      background-repeat: repeat; !important;
+      background-attachment: fixed; !important;
+
+}
+}
+
+#main {
+    overflow: auto;
+    padding-bottom: 20px;
+}
+#footer {
+    position: relative;
+    height: 20px;
+    margin-top: -20px;
+    clear: both;
+}
+h1, h3, h6 {
+    font-family: 'Francois One', sans-serif;
+}
+.row {
+    padding-bottom: 10px;
+}
+.logo {
+    height: 35px;
+ }
+.navbar {
+    margin: 30px;
+    background-color: #ec7517;
+    height: 45px;
+   }
+@media only screen and (max-width: 767px) {
+    .navbar {
+    margin: 30px;
+    background-color: #ec7517;
+    height: auto;
+   }
+
+}
+.nav-link, .nav-link:hover, .nav-link:visited {
+    font-family: 'Francois One', sans-serif;
+    color: #f8f1ad;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container-fluid {
+    position: fixed;
+    z-index: -1;
+}
+
+.fa-facebook-square, .fa-instagram-square, .fa-envelope-square, .fa-phone-square, .fa-linkedin {
+    color: #ec7517;
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+button:focus {
+    outline: none;
+}
+.card {
+    margin-top: 30px;
+    background-color: transparent;
+    border: transparent;
+
+}
+.card-deck {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+a, a:hover, a:visited, p {
+    font-family: 'Francois One', sans-serif;
+    font-size: 20px ;
+    color: #333333;
+    padding-left: 5px;
+
+}
+.contact-link {
+    text-decoration: underline;
+}
+
+.card-header {
+    background: linear-gradient(to right, rgba(62, 179, 68, 1), transparent);
+            rgba(252, 227, 148, 0.2);
+
+}
+#post-title {
+    font-family:'Covered By Your Grace', cursive; !important;
+    font-size: 30px; !important;
+}
+#title {
+    font-family:'Covered By Your Grace', cursive; !important;
+    font-size: 50px; !important;
+}
+h2 {
+    font-size: 60px; !important;
+    font-family:'Covered By Your Grace', cursive; !important;
+
+}
+h5 {
+    font-family: 'Francois One', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 35px; !important;
+    text-align: center;
+
+}
+h4 {
+    font-family: 'Francois One', sans-serif;
+    font-size: 25px;
+}
+#post-content {
+    font-family: 'Francois One', sans-serif;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 35px; !important;
+    text-align: left; !important;
+}
+.list-group-item {
+    background: linear-gradient(to right, rgba(62, 179, 68, 1), transparent);
+            rgba(252, 227, 148, 0.2);
+    font-size: 17px;
+    font-family: 'Francois One', sans-serif;
+}
+
+#hola {
+    padding: 10px;
+}
+
+#first, #second, #third {
+    padding: 10px;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contact {
+        min-height: 600px; !important;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+h2 {
+    font-size: 40px; !important;
+    text-align: center; !important;
+}
+    h5 {
+        font-size: 20px;
+        text-align: center; !important;
+    }
+}
+
+.btn {
+    margin-top: 5px;
+}
+.card-footer{
+    background: transparent;
+}
+
+.step-links {
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 0;
+}
+#pag2, #pag {
+    font-size: 20px; !important;
+    font-weight: 800; !important;
+    text-decoration: unset !important;
+}
+.card-img-top {
+    max-width: 500px;
+
+}
+.fb-share-button {
+    margin-bottom: 10px;
+}
+small {
+    font-family: 'Francois One', sans-serif;
+}
