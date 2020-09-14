@@ -125,7 +125,7 @@ button:focus {
 }
 #blog-title:hover {
      background-color: #bf6116;
-    transform: scale(1.1);
+
 }
 
 .hola {
@@ -275,7 +275,6 @@ rgba(252, 227, 148, 0.2);
 .activate, .accordion:hover {
   background: linear-gradient(to right, rgba(188, 96, 26, 1), transparent);
             rgba(252, 227, 148, 0.2); !important;
-    transform: scale(1.1);
 }
 
 .panel {
