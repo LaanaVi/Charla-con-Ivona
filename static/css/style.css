@@ -133,6 +133,7 @@ button:focus {
     font-family:'Covered By Your Grace', cursive; !important;
     color: black; !important;
     text-shadow: 4px 2px 11px rgba(138, 138, 140, 1);
+    text-align: center;
 
 }
 .charla {
@@ -164,7 +165,7 @@ button:focus {
     padding: 10px;
 }
 
-#first, #second, #third {
+#first, #second {
     padding: 10px;
     text-shadow: 4px 2px 11px rgba(138, 138, 140, 1);
 }
@@ -206,6 +207,7 @@ small {
 }
 .prijava {
     font-size: 25px;
+    text-shadow: 4px 2px 11px rgba(138, 138, 140, 1);
 }
 .social-media {
     position: center;
@@ -214,12 +216,13 @@ small {
     font-size: 17px;
     align-items: center;
     align-content: center;
+    text-shadow: 4px 2px 11px rgba(138, 138, 140, 1);
 }
 .hover-media:hover {
     transform: scale(1.5);
     text-decoration: none;
 }
-.fa-facebook-square:hover, .fa-instagram-square:hover,  .fa-linkedin:hover {
+.fa-facebook-square:hover, .fa-instagram-square:hover,  .fa-linkedin:hover, .phone-home:hover {
     transform: scale(1.5);
 }
 .box, .form-inline {
@@ -273,7 +276,7 @@ rgba(252, 227, 148, 0.2);
 }
 
 .activate, .accordion:hover {
-  background: linear-gradient(to right, rgba(188, 96, 26, 1), transparent);
+  background: linear-gradient(to right, rgb(205, 92, 9), transparent);
             rgba(252, 227, 148, 0.2); !important;
 }
 

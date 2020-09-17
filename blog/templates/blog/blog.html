@@ -27,7 +27,7 @@
                   </div>
                   <div class="card-body text-dark">
                       <a href="{% url 'post' id=post.id %}">
-                        <h4 class="card-text blog">{{post.content|safe |truncatewords:20|linebreaks}} &nbsp;<i class="fas fa-angle-double-right"></i></h4>
+                        <h4 class="card-text blog">{{post.content|safe |truncatewords:20|linebreaks}}</h4>
                       </a>
                   </div>
                   <div class="card-footer text-muted">
