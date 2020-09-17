@@ -218,6 +218,13 @@ small {
     align-content: center;
     text-shadow: 4px 2px 11px rgba(138, 138, 140, 1);
 }
+@media only screen and (min-width: 480px) {
+
+
+    .phone-number {
+        display: none;
+    }
+}
 .hover-media:hover {
     transform: scale(1.5);
     text-decoration: none;
