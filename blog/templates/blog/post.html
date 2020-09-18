@@ -9,7 +9,7 @@
 {% block body %}
 <div class="container">
      <div class="row justify-content-center">
-        <div class="card-body">
+        <div style="display: flex" class="card-body">
             <h4 style="text-align: center !important;" class="card-header" id="blog-title2">{{post.title}}</h4>
             <h4 style="padding: 20px" class="card-text blog">{{post.content|safe|linebreaks}}</h4><hr>
             <p style="text-align: end !important;" class="card-text blog"><small class="text-muted">Autor: {{post.author}}</small></p><hr>
