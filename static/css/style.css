@@ -109,19 +109,25 @@ button:focus {
 .blog {
     font-size: 18px;!important;
     font-family: 'Open Sans', sans-serif; !important;
-    font-weight: 400; !important;
+    font-weight: 500; !important;
+    text-align: justify; !important;
+
 }
 .list-group-item, .list-group-item:hover, .active {
     color: black; !important;
 }
 #blog-title, #blog-title:hover, #blog-title2 {
-    background-color: #ec7517;
-    max-height: 65px; !important;
+    background-color: #ec7517; !important;
     vertical-align: center; !important;
     text-decoration: none; !important;
-     -webkit-box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75);
-    box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75); !important;
+    -moz-box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75); !important;
+    box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75); !important;
+    font-family:'Covered By Your Grace', cursive; !important;
+    text-shadow: 4px 2px 11px rgba(138, 138, 140, 1); !important;
+    font-weight: 400; !important;
+    font-size: 40px; !important;
+    color: black; !important;
 }
 #blog-title:hover {
      background-color: #bf6116;
@@ -216,7 +222,6 @@ small {
     font-size: 17px;
     align-items: center;
     align-content: center;
-    text-shadow: 4px 2px 11px rgba(138, 138, 140, 1);
 }
 @media only screen and (min-width: 480px) {
 
@@ -252,13 +257,7 @@ small {
     cursor: pointer; !important;
     transform: scale(1.5); !important;
 }
-#blog-title, #blog-title:hover, #blog-title2 {
-    font-family:'Covered By Your Grace', cursive; !important;
-    font-weight: 400; !important;
-    font-size: 40px; !important;
-    color: black; !important;
-    text-decoration: none; !important;
-}
+
 .tab-content {
     vertical-align: center; !important;
 }
