@@ -22,7 +22,7 @@
             <div class="card border-dark mb-6" style="max-width: 800px;">
                   <div>
                       <a href="{% url 'post' id=post.id %}">
-                        <h4 class="card-header" id="blog-title">{{post.title}}</h4>
+                        <h4 class="card-header" id="blog-title">{{post.title|upper}}</h4>
                       </a>
                   </div>
                   <div class="card-body text-dark">
