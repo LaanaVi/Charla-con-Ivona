@@ -152,6 +152,7 @@ button:focus {
 
 }
 
+
 #post-content {
     font-family: 'PT Serif', serif;
     font-weight: 700;
@@ -188,8 +189,11 @@ button:focus {
     text-align: center; !important;
 }
     .charla {
-        font-size: 20px;
+        font-size: 15px; !important;
         text-align: center; !important;
+    }
+    .accordion {
+        font-size: 15px !important;
     }
 }
 
