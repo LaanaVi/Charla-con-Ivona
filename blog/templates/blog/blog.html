@@ -27,7 +27,7 @@
                   </div>
                   <div class="card-body text-dark">
                       <a href="{% url 'post' id=post.id %}">
-                        <h4 style="padding-top: 20px" class="card-text blog">{{post.content|safe |truncatewords:20|linebreaks}}</h4>
+                        <h4 style="padding-top: 20px; background-color: white !important;" class="card-text blog">{{post.content|safe |truncatewords:20|linebreaks}}</h4>
                       </a>
                   </div>
                   <div class="card-footer text-muted">
