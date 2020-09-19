@@ -37,7 +37,7 @@ a, a:hover {
     text-decoration: none; !important;
 }
 h1, h3, h6 {
-    font-family: 'PT Serif', serif;
+    font-family: 'Open Sans', sans-serif;
 }
 .row {
     padding-bottom: 10px;
@@ -123,7 +123,7 @@ button:focus {
     -webkit-box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75); !important;
     -moz-box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75); !important;
     box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75); !important;
-    font-family:'Covered By Your Grace', cursive; !important;
+    font-family: 'Rock Salt', cursive; !important;
     text-shadow: 4px 2px 11px rgba(138, 138, 140, 1); !important;
     font-weight: 400; !important;
     font-size: 37px; !important;
@@ -136,7 +136,7 @@ button:focus {
 
 .hola {
     font-size: 60px; !important;
-    font-family:'Covered By Your Grace', cursive; !important;
+    font-family: 'Rock Salt', cursive; !important;
     color: black; !important;
     text-shadow: 4px 2px 11px rgba(138, 138, 140, 1);
     text-align: center;
@@ -154,7 +154,7 @@ button:focus {
 
 
 #post-content {
-    font-family: 'PT Serif', serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 20px;
     line-height: 35px; !important;
