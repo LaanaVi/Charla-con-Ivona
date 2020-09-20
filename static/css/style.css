@@ -36,9 +36,6 @@ a, a:hover {
     color: black; !important;
     text-decoration: none; !important;
 }
-h1, h3, h6 {
-    font-family: 'Open Sans', sans-serif;
-}
 .row {
     padding-bottom: 10px;
 }
