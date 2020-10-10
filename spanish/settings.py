@@ -127,3 +127,53 @@ CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
 django_heroku.settings(locals())
+
+KEDITOR_CONFIGS = {
+    'default': {
+        'width': '100%',
+        'height': 600,
+        'toolbar': 'Custom',
+        'extraPlugins': ','.join([
+            'codesnippet',
+            'youtube'
+        ]),
+        'toolbar_Custom': [
+            [
+                'Bold',
+                'Italic',
+                'Underline'
+            ],
+            [
+                'Font',
+                'FontSize',
+                'TextColor',
+                'BGColor'
+            ],
+            [
+                'NumberedList',
+                'BulletedList',
+                '-',
+                'Outdent',
+                'Indent',
+                '-',
+                'JustifyLeft',
+                'JustifyCenter',
+                'JustifyRight',
+                'JustifyBlock'
+            ],
+            [
+                'Link',
+                'Unlink'
+            ],
+            [
+                'RemoveFormat',
+                'Source',
+                'CodeSnippet',
+                'Image',
+                'Youtube'
+            ]
+        ],
+
+    },
+
+}
