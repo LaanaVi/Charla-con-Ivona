@@ -36,9 +36,6 @@ a, a:hover {
     color: black; !important;
     text-decoration: none; !important;
 }
-h1, h3, h6 {
-    font-family: 'PT Serif', serif;
-}
 .row {
     padding-bottom: 10px;
 }
@@ -49,13 +46,18 @@ h1, h3, h6 {
     margin: 30px;
     background-color: #ec7517;
     height: 45px;
-    box-shadow: #8B98AB;
+     -webkit-box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75);
+    box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75);
    }
 @media only screen and (max-width: 767px) {
     .navbar {
     margin: 30px;
     background-color: #ec7517;
     height: auto;
+      -webkit-box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75);
+    box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75);
    }
 
 }
@@ -94,7 +96,7 @@ button:focus {
     margin-bottom: 50px;
 }
 .list-group-item {
-     background: linear-gradient(to right, rgba(236, 117, 23, 1), transparent);
+     background: linear-gradient(to right, rgb(236, 117, 23), transparent);
             rgba(252, 227, 148, 0.2);
     font-size: 15px; !important;
     font-family: 'Open Sans', sans-serif; !important;
@@ -104,23 +106,37 @@ button:focus {
 .blog {
     font-size: 18px;!important;
     font-family: 'Open Sans', sans-serif; !important;
-    font-weight: 400; !important;
+    font-weight: 500; !important;
+    text-align: justify; !important;
+
 }
 .list-group-item, .list-group-item:hover, .active {
     color: black; !important;
 }
-#blog-title, #blog-title:hover {
-    background: linear-gradient(to right, rgba(236, 117, 23, 1), transparent);
-            rgba(252, 227, 148, 0.2); !important;
-    max-height: 65px; !important;
+#blog-title, #blog-title:hover, #blog-title2 {
+    background-color: #ec7517; !important;
     vertical-align: center; !important;
     text-decoration: none; !important;
+    -webkit-box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75); !important;
+    -moz-box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75); !important;
+    box-shadow: 13px 14px 43px -1px rgba(0,0,0,0.75); !important;
+    font-family: 'Just Me Again Down Here', cursive;
+    text-shadow: 4px 2px 11px rgba(138, 138, 140, 1); !important;
+    font-weight: 400; !important;
+    font-size: 37px; !important;
+    color: black; !important;
+}
+#blog-title:hover {
+     background-color: #bf6116;
+
 }
 
 .hola {
     font-size: 60px; !important;
-    font-family:'Covered By Your Grace', cursive; !important;
+    font-family: 'Just Me Again Down Here', cursive;
     color: black; !important;
+    text-shadow: 4px 2px 11px rgba(138, 138, 140, 1);
+    text-align: center;
 
 }
 .charla {
@@ -133,8 +149,9 @@ button:focus {
 
 }
 
+
 #post-content {
-    font-family: 'PT Serif', serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 20px;
     line-height: 35px; !important;
@@ -152,8 +169,9 @@ button:focus {
     padding: 10px;
 }
 
-#first, #second, #third {
+#first, #second {
     padding: 10px;
+    text-shadow: 4px 2px 11px rgba(138, 138, 140, 1);
 }
 
 @media only screen and (min-width: 1024px) {
@@ -164,12 +182,18 @@ button:focus {
 
 @media only screen and (max-width: 490px) {
 .hola {
-    font-size: 40px; !important;
+    font-size: 45px; !important;
     text-align: center; !important;
 }
     .charla {
-        font-size: 20px;
+        font-size: 15px; !important;
         text-align: center; !important;
+    }
+    .accordion {
+        font-size: 15px !important;
+    }
+    .blog {
+        font-size: 15px;
     }
 }
 
@@ -193,6 +217,7 @@ small {
 }
 .prijava {
     font-size: 25px;
+    text-shadow: 4px 2px 11px rgba(138, 138, 140, 1);
 }
 .social-media {
     position: center;
@@ -202,11 +227,18 @@ small {
     align-items: center;
     align-content: center;
 }
+@media only screen and (min-width: 480px) {
+
+
+    .phone-number {
+        display: none;
+    }
+}
 .hover-media:hover {
     transform: scale(1.5);
     text-decoration: none;
 }
-.fa-facebook-square:hover, .fa-instagram-square:hover,  .fa-linkedin:hover {
+.fa-facebook-square:hover, .fa-instagram-square:hover,  .fa-linkedin:hover, .phone-home:hover {
     transform: scale(1.5);
 }
 .box, .form-inline {
@@ -229,45 +261,48 @@ small {
     cursor: pointer; !important;
     transform: scale(1.5); !important;
 }
-#blog-title, #blog-title:hover {
-    font-family:'Covered By Your Grace', cursive; !important;
-    font-weight: 400; !important;
-    font-size: 40px; !important;
-    color: black; !important;
-    text-decoration: none; !important;
-}
+
 .tab-content {
     vertical-align: center; !important;
 }
 .accordion {
-  background: linear-gradient(to right, rgba(236, 117, 23, 1), transparent);
-            rgba(252, 227, 148, 0.2); !important;
-  color: black;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: #0E2231; !important;
-  text-align: left;
-  outline: #0E2231; !important;
-  font-size: 15px;
-  transition: 0.4s;
+    background: linear-gradient(to right, rgba(236, 117, 23, 1), transparent);
+rgba(252, 227, 148, 0.2);
+!important;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: #0E2231;
+!important;
+    text-align: left;
+    outline: #0E2231;
+!important;
+    font-family: 'Open Sans', sans-serif; !important;
+    font-weight: 700; !important;
+    font-size: 18px;
+    transition: 0.4s;
+    margin-bottom: 5px;
 }
 
 .activate, .accordion:hover {
-  background: linear-gradient(to right, rgba(222, 110, 22, 1), transparent);
+  background: linear-gradient(to right, rgb(205, 92, 9), transparent);
             rgba(252, 227, 148, 0.2); !important;
 }
 
 .panel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+    margin-top: 5px;
+    padding: 0 18px;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-family: 'Open Sans', sans-serif; !important;
+    font-weight: 700; !important;
+    font-size: 18px;
 }
 
 .acc-title {
-    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     color: black;
     text-align: left; !important;
@@ -278,6 +313,7 @@ small {
     align-items: flex-start;
     text-align: left;
 }
-.lista {
-    border: #0E2231; !important;
+.blogpost {
+    margin-left: 20px;
+    margin-right: 20px;
 }
