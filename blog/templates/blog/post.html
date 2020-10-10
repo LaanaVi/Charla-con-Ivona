@@ -8,11 +8,8 @@
 
 {% block body %}
 <div class="container">
-     <div class="row justify-content-center">
-        <div style="margin-left: 20px; !important; margin-right: 20px; !important;" class="card-body">
-            <div class="container blogpost">
-                 <div class="row justify-content-center">
-                      <div style="padding-left: 5px; padding-right: 5px" class="col-12">
+        <div class="row justify-content-center">
+            <div class="card shadow-sm p-3 mb-5 bg-white rounded">
             <h4 style="text-align: center !important;" class="card-header" id="blog-title2">{{post.title|upper}}</h4>
             <h4 style="text-align: justify !important; padding-top: 30px" class="card-text blog">{{post.content|safe|linebreaks}}</h4><hr>
             <p style="text-align: end !important;" class="card-text blog"><small class="text-muted">Autor: {{post.author}}</small></p><hr>
@@ -23,8 +20,5 @@
             </a>
         </div>
      </div>
-</div>
-        </div>
-    </div>
 </div>
 {% endblock%}
