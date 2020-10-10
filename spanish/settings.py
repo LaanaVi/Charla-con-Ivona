@@ -128,7 +128,7 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 
 django_heroku.settings(locals())
 
-KEDITOR_CONFIGS = {
+CKEDITOR_CONFIGS = {
     'default': {
         'width': '100%',
         'height': 600,
