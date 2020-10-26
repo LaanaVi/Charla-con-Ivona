@@ -1,1 +1,0 @@
-web: gunicorn spanish.wsgi --log-file -

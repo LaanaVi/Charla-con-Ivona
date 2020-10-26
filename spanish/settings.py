@@ -1,19 +1,12 @@
 import os
-from decouple import config
-import django_heroku
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = config("SECRET_KEY")
+SECRET_KEY = "SECRET_KEY"
 
-DEBUG = False
+DEBUG = True
 
-
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-
-ALLOWED_HOSTS = ["charlaconivona.herokuapp.com", "charlaconivona.com", "127.0.0.1"]
+ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
 
@@ -39,7 +32,6 @@ SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -71,10 +63,10 @@ WSGI_APPLICATION = 'spanish.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config("NAME"),
-        'USER': config("USER"),
-        'PASSWORD': config("PASSWORD"),
-        'HOST': config("HOST"),
+        'NAME': "NAME",
+        'USER': "USER",
+        'PASSWORD': "PASSWORD",
+        'HOST': "HOST",
         'PORT': '5432'
     }
 }
@@ -95,8 +87,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = config("MAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
+EMAIL_HOST_USER = "MAIL_HOST_USER"
+EMAIL_HOST_PASSWORD = "EMAIL_HOST_PASSWORD"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
@@ -125,8 +117,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 CKEDITOR_UPLOAD_PATH = "uploads/"
-
-django_heroku.settings(locals())
 
 CKEDITOR_CONFIGS = {
     'default': {
